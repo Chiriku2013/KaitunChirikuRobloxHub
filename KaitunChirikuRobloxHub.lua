@@ -1,6 +1,6 @@
 if table.find({2753915549, 4442272183, 7449423635}, game.PlaceId) then
     -- Set chữ và logo UI trước khi load UI
-    getgenv().BFInfoTopText = "Kaitun Auto Farm | By Chiriku"
+    getgenv().BFInfoTopText = "Kaitun Chiriku Roblox Hub"
     getgenv().BFInfoLogoId = "rbxassetid://16451257326"
 
     -- Load UI
