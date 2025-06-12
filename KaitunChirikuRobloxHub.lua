@@ -107,5 +107,5 @@ if worldMap[placeId] then
         loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/73mkp0aqyfo4ypy8hvl0nz10lq49fey5.lua"))()
     end)
 else
-    game.Players.LocalPlayer:Kick("Unsupported Game")
+    game.Players.LocalPlayer:Kick("This script is not supported in this game, please try again with Blox Fruits!")
 end
