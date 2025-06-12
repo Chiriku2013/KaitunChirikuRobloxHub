@@ -5,10 +5,10 @@ if table.find({2753915549, 4442272183, 7449423635}, game.PlaceId) then
     -- Đợi UI load xong
     repeat task.wait() until _G.BFInfoUI_Loaded
 
-    -- Set chữ và logo của UI
+    -- Set chữ và logo UI
     pcall(function()
-        topText.Text = "Kaitun Chiriku Roblox Hub"
-        logo.Image = "rbxassetid://16451257326" -- thay đổi ID tùy ý
+        getgenv().BFInfoTopText = "Kaitun Auto Farm | By Chiriku"
+        getgenv().BFInfoLogoId = "rbxassetid://16451257326"
     end)
 
     -- Set Config Kaitun
@@ -89,7 +89,7 @@ if table.find({2753915549, 4442272183, 7449423635}, game.PlaceId) then
         },
     }
 
-    -- Load Kaitun
+    -- Sau khi set xong config mới load Kaitun
     loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/73mkp0aqyfo4ypy8hvl0nz10lq49fey5.lua"))()
 else
     warn("Script chỉ hoạt động ở Sea 1, 2, 3!")
