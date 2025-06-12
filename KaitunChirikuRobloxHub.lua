@@ -1,14 +1,30 @@
-if table.find({2753915549, 4442272183, 7449423635}, game.PlaceId) then
-    -- Set UI text/logo trước
+local placeId = game.PlaceId
+local worldMap = {
+    [2753915549] = true,
+    [4442272183] = true,
+    [7449423635] = true
+}
+
+if worldMap[placeId] then
+    -- Xác định World
+    if placeId == 2753915549 then
+        World1 = true
+    elseif placeId == 4442272183 then
+        World2 = true
+    elseif placeId == 7449423635 then
+        World3 = true
+    end
+
+    -- Set UI text/logo
     getgenv().BFInfoTopText = "Kaitun Chiriku Roblox Hub"
     getgenv().BFInfoLogoId = "rbxassetid://16451257326"
 
-    -- Load UI song song (không chặn Kaitun)
+    -- Load UI song song
     task.spawn(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Chiriku2013/BFInfoUi/refs/heads/main/BFInfoUi.lua"))()
     end)
 
-    -- Set Kaitun Config
+    -- Kaitun Config
     getgenv().ConfigsKaitun = {
         ["Safe Mode"] = false,
         ["Melee"] = {
@@ -86,10 +102,10 @@ if table.find({2753915549, 4442272183, 7449423635}, game.PlaceId) then
         },
     }
 
-    -- Load Kaitun song song (ngay lập tức)
+    -- Load Kaitun script song song
     task.spawn(function()
         loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/73mkp0aqyfo4ypy8hvl0nz10lq49fey5.lua"))()
     end)
 else
-    warn("Script chỉ hoạt động ở Sea 1, 2, 3!")
+    game.Players.LocalPlayer:Kick("Unsupported Game")
 end
