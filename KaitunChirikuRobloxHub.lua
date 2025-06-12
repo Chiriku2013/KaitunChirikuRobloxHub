@@ -1,15 +1,10 @@
 if table.find({2753915549, 4442272183, 7449423635}, game.PlaceId) then
+    -- Set chữ và logo UI trước khi load UI
+    getgenv().BFInfoTopText = "Kaitun Auto Farm | By Chiriku"
+    getgenv().BFInfoLogoId = "rbxassetid://16451257326"
+
     -- Load UI
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Chiriku2013/BFInfoUi/refs/heads/main/BFInfoUi.lua"))()
-
-    -- Đợi UI load xong
-    repeat task.wait() until _G.BFInfoUI_Loaded
-
-    -- Set chữ và logo UI
-    pcall(function()
-        getgenv().BFInfoTopText = "Kaitun Auto Farm | By Chiriku"
-        getgenv().BFInfoLogoId = "rbxassetid://16451257326"
-    end)
 
     -- Set Config Kaitun
     getgenv().ConfigsKaitun = {
@@ -89,7 +84,10 @@ if table.find({2753915549, 4442272183, 7449423635}, game.PlaceId) then
         },
     }
 
-    -- Sau khi set xong config mới load Kaitun
+    -- Đợi UI load xong rồi mới chạy Kaitun
+    repeat task.wait() until _G.BFInfoUI_Loaded
+
+    -- Load Kaitun
     loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/73mkp0aqyfo4ypy8hvl0nz10lq49fey5.lua"))()
 else
     warn("Script chỉ hoạt động ở Sea 1, 2, 3!")
