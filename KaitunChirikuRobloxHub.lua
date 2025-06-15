@@ -69,8 +69,9 @@ if worldMap[placeId] then
         },
         ["Mastery"] = {
             ["Melee"] = true,
+            ["Defense"] = true,
             ["Sword"] = false,
-            ["Gun"] = false
+            ["Gun"] = false,
             ["Devil Fruits"] = false,
             ["Configs"] = {
                 ["Selected All Sword"] = true,
