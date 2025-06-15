@@ -24,14 +24,18 @@ if worldMap[placeId] then
     getgenv().LogoScript = "rbxassetid://16451257326"
     getgenv().CreditScript = "By: Chiriku Roblox"
     
-    -- Load UI song song - BFInfoUi
-    task.spawn(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Chiriku2013/BFInfoUi/refs/heads/main/BFInfoUi.lua"))()
-    end)
-    
     -- Load UI song song - UiLoading
     task.spawn(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Chiriku2013/UiLoading/refs/heads/main/UiLoading.lua"))()
+    end)
+
+    -- Đợi UI Loading hoàn tất
+    repeat task.wait()until
+    _G.LoadingDone
+    
+    -- Load UI song song - BFInfoUi
+    task.spawn(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Chiriku2013/BFInfoUi/refs/heads/main/BFInfoUi.lua"))()
     end)
 
     -- Kaitun Config
