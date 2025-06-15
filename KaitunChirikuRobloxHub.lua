@@ -19,9 +19,19 @@ if worldMap[placeId] then
     getgenv().BFInfoTopText = "Kaitun Chiriku Roblox Hub"
     getgenv().BFInfoLogoId = "rbxassetid://16451257326"
 
-    -- Load UI song song
+    -- Set UI title/logo/credit - UiLoading
+    getgenv().TitleScript = "Loading Script Kaitun..."
+    getgenv().LogoScript = "rbxassetid://16451257326"
+    getgenv().CreditScript = "By: Chiriku Roblox"
+    
+    -- Load UI song song - BFInfoUi
     task.spawn(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Chiriku2013/BFInfoUi/refs/heads/main/BFInfoUi.lua"))()
+    end)
+    
+    -- Load UI song song - UiLoading
+    task.spawn(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Chiriku2013/UiLoading/refs/heads/main/UiLoading.lua"))()
     end)
 
     -- Kaitun Config
