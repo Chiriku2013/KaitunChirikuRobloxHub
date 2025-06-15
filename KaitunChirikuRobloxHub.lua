@@ -15,7 +15,7 @@ if worldMap[placeId] then
         World3 = true
     end
 
-    -- Set UI text/logo
+    -- Set UI text/logo - BFInfoUi
     getgenv().BFInfoTopText = "Kaitun Chiriku Roblox Hub"
     getgenv().BFInfoLogoId = "rbxassetid://16451257326"
 
