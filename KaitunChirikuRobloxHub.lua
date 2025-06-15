@@ -17,11 +17,11 @@ if worldMap[placeId] then
 
     -- Set UI text/logo - BFInfoUi
     getgenv().BFInfoTopText = "Kaitun Chiriku Roblox Hub"
-    getgenv().BFInfoLogoId = "rbxassetid://16451257326"
+    getgenv().BFInfoLogoId = "rbxassetid://119836305527028"
 
     -- Set UI title/logo/credit - UiLoading
     getgenv().TitleScript = "Loading Script Kaitun..."
-    getgenv().LogoScript = "rbxassetid://16451257326"
+    getgenv().LogoScript = "rbxassetid://119836305527028"
     getgenv().CreditScript = "By: Chiriku Roblox"
     
     -- Load UI song song - UiLoading
