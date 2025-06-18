@@ -89,7 +89,7 @@ if worldMap[placeId] then
                 ["Mink"] = true,
                 ["Human"] = true,
                 ["Skypiea"] = true,
-                ["Fishman"] = false,
+                ["Fishman"] = true,
             },
         },
         ["Fruit"] = {
